@@ -1,0 +1,33 @@
+﻿@model TravelsalCoreProje.Areas.Member.Models.UserEditViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h1>Profil düzenleme sayfası</h1>
+<form method="post" enctype="multipart/form-data"> <!--Resim ekleyebilmek için enctype koyduk-->
+    @Html.Label("Adınız")
+    <input type="text" asp-for="name" class="form-control" />
+    <br /> 
+    @Html.Label("Soyadınız")
+    <input type="text" asp-for="surname" class="form-control" />
+    <br />
+    @Html.Label("Mail Adersiniz")
+    <input type="text" asp-for="mail" class="form-control" />
+    <br />
+    @Html.Label("Şifreniz")
+    <input type="text" asp-for="password" class="form-control" />
+    <br />
+    @Html.Label("Şifre Tekrar")
+    <input type="text" asp-for="confirmpassword" class="form-control" />
+    <br />
+    @Html.Label("Telefon Numarası")
+    <input type="text" asp-for="phonenumber" class="form-control" />
+    <br />
+    <div class="form-group">
+        <label>Resim seçin</label>
+        <input type="file" asp-for="Image"/>
+    </div>
+    <br/>
+    <button class="btn btn-primary">Bilgileri Güncelle</button>    
+</form>
